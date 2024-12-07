@@ -32,6 +32,9 @@ namespace Tyuiu.TimoninIA.Sprint6.Task2.V25
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             groupBoxOne_ZNA = new GroupBox();
             labelCondition_ZNA = new Label();
             groupBoxTwo_ZNA = new GroupBox();
@@ -44,13 +47,16 @@ namespace Tyuiu.TimoninIA.Sprint6.Task2.V25
             groupBoxThree_ZNA = new GroupBox();
             textBoxResult_ZNA = new TextBox();
             labelResult_ZNA = new Label();
+            chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             groupBoxOne_ZNA.SuspendLayout();
             groupBoxTwo_ZNA.SuspendLayout();
             groupBoxThree_ZNA.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)chart1).BeginInit();
             SuspendLayout();
             // 
             // groupBoxOne_ZNA
             // 
+            groupBoxOne_ZNA.Controls.Add(chart1);
             groupBoxOne_ZNA.Controls.Add(labelCondition_ZNA);
             groupBoxOne_ZNA.Location = new Point(12, 12);
             groupBoxOne_ZNA.Name = "groupBoxOne_ZNA";
@@ -167,6 +173,22 @@ namespace Tyuiu.TimoninIA.Sprint6.Task2.V25
             labelResult_ZNA.TabIndex = 0;
             labelResult_ZNA.Text = "Результат:";
             // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            chart1.Legends.Add(legend1);
+            chart1.Location = new Point(229, 41);
+            chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            chart1.Series.Add(series1);
+            chart1.Size = new Size(300, 300);
+            chart1.TabIndex = 2;
+            chart1.Text = "chart1";
+            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -184,6 +206,7 @@ namespace Tyuiu.TimoninIA.Sprint6.Task2.V25
             groupBoxTwo_ZNA.PerformLayout();
             groupBoxThree_ZNA.ResumeLayout(false);
             groupBoxThree_ZNA.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)chart1).EndInit();
             ResumeLayout(false);
         }
 
@@ -201,5 +224,6 @@ namespace Tyuiu.TimoninIA.Sprint6.Task2.V25
         private TextBox textBoxInputEnd_ZNA;
         private TextBox textBoxInputStart_ZNA;
         private TextBox textBoxResult_ZNA;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }
