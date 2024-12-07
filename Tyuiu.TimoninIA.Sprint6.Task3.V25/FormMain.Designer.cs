@@ -32,120 +32,131 @@ namespace Tyuiu.TimoninIA.Sprint6.Task3.V25
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            groupBoxYsl_KDA = new GroupBox();
-            textBox1 = new TextBox();
-            groupBoxOut_KDA = new GroupBox();
-            dataGridView_Output_KDA = new DataGridView();
-            dataGridView_Input_KDA = new DataGridView();
-            buttonHelp_KDA = new Button();
-            buttonDone_KDA = new Button();
-            groupBoxYsl_KDA.SuspendLayout();
-            groupBoxOut_KDA.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView_Output_KDA).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView_Input_KDA).BeginInit();
+            groupBoxTask_NVI = new GroupBox();
+            buttonHelp_NVI = new Button();
+            dataGridMatrix_NVI = new DataGridView();
+            textBoxTask_NVI = new TextBox();
+            groupBoxResult_NVI = new GroupBox();
+            dataGridMatrixResult_NVI = new DataGridView();
+            buttonDone_NVI = new Button();
+            groupBoxTask_NVI.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridMatrix_NVI).BeginInit();
+            groupBoxResult_NVI.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridMatrixResult_NVI).BeginInit();
             SuspendLayout();
             // 
-            // groupBoxYsl_KDA
+            // groupBoxTask_NVI
             // 
-            groupBoxYsl_KDA.Controls.Add(textBox1);
-            groupBoxYsl_KDA.Location = new Point(13, 13);
-            groupBoxYsl_KDA.Name = "groupBoxYsl_KDA";
-            groupBoxYsl_KDA.Size = new Size(239, 300);
-            groupBoxYsl_KDA.TabIndex = 0;
-            groupBoxYsl_KDA.TabStop = false;
-            groupBoxYsl_KDA.Text = "Условие";
+            groupBoxTask_NVI.Controls.Add(buttonDone_NVI);
+            groupBoxTask_NVI.Controls.Add(buttonHelp_NVI);
+            groupBoxTask_NVI.Controls.Add(dataGridMatrix_NVI);
+            groupBoxTask_NVI.Controls.Add(textBoxTask_NVI);
+            groupBoxTask_NVI.Location = new Point(12, 12);
+            groupBoxTask_NVI.Name = "groupBoxTask_NVI";
+            groupBoxTask_NVI.Size = new Size(631, 426);
+            groupBoxTask_NVI.TabIndex = 0;
+            groupBoxTask_NVI.TabStop = false;
+            groupBoxTask_NVI.Text = "Условие";
             // 
-            // textBox1
+            // buttonHelp_NVI
             // 
-            textBox1.BackColor = SystemColors.MenuBar;
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Location = new Point(11, 25);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(215, 212);
-            textBox1.TabIndex = 0;
-            textBox1.Text = resources.GetString("textBox1.Text");
+            buttonHelp_NVI.FlatStyle = FlatStyle.Flat;
+            buttonHelp_NVI.Location = new Point(81, 372);
+            buttonHelp_NVI.Name = "buttonHelp_NVI";
+            buttonHelp_NVI.Size = new Size(37, 34);
+            buttonHelp_NVI.TabIndex = 1;
+            buttonHelp_NVI.Text = "?";
+            buttonHelp_NVI.UseVisualStyleBackColor = false;
+            buttonHelp_NVI.Click += buttonHelp_NVI_Click;
             // 
-            // groupBoxOut_KDA
+            // dataGridMatrix_NVI
             // 
-            groupBoxOut_KDA.Controls.Add(dataGridView_Output_KDA);
-            groupBoxOut_KDA.Location = new Point(502, 13);
-            groupBoxOut_KDA.Name = "groupBoxOut_KDA";
-            groupBoxOut_KDA.Size = new Size(238, 259);
-            groupBoxOut_KDA.TabIndex = 1;
-            groupBoxOut_KDA.TabStop = false;
-            groupBoxOut_KDA.Text = "Вывод данных";
+            dataGridMatrix_NVI.AllowUserToResizeColumns = false;
+            dataGridMatrix_NVI.AllowUserToResizeRows = false;
+            dataGridMatrix_NVI.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridMatrix_NVI.ColumnHeadersVisible = false;
+            dataGridMatrix_NVI.Location = new Point(377, 26);
+            dataGridMatrix_NVI.Name = "dataGridMatrix_NVI";
+            dataGridMatrix_NVI.ReadOnly = true;
+            dataGridMatrix_NVI.RowHeadersVisible = false;
+            dataGridMatrix_NVI.RowHeadersWidth = 51;
+            dataGridMatrix_NVI.Size = new Size(248, 380);
+            dataGridMatrix_NVI.TabIndex = 1;
             // 
-            // dataGridView_Output_KDA
+            // textBoxTask_NVI
             // 
-            dataGridView_Output_KDA.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView_Output_KDA.ColumnHeadersVisible = false;
-            dataGridView_Output_KDA.Location = new Point(11, 39);
-            dataGridView_Output_KDA.Name = "dataGridView_Output_KDA";
-            dataGridView_Output_KDA.RowHeadersVisible = false;
-            dataGridView_Output_KDA.Size = new Size(213, 210);
-            dataGridView_Output_KDA.TabIndex = 3;
+            textBoxTask_NVI.BorderStyle = BorderStyle.None;
+            textBoxTask_NVI.Location = new Point(6, 26);
+            textBoxTask_NVI.Multiline = true;
+            textBoxTask_NVI.Name = "textBoxTask_NVI";
+            textBoxTask_NVI.ReadOnly = true;
+            textBoxTask_NVI.Size = new Size(365, 380);
+            textBoxTask_NVI.TabIndex = 0;
+            textBoxTask_NVI.Text = "Дана матрица 5 на 5 \r\n14   5  -9  18  21\r\n\r\n-5 -12 -12   4  28\r\n\r\n27  -2 -14  23  27\r\n\r\n-19 -15  17  15   1\r\n\r\n33   2   6  24  24\r\nОтсортировать 3 столбец по возрастанию";
             // 
-            // dataGridView_Input_KDA
+            // groupBoxResult_NVI
             // 
-            dataGridView_Input_KDA.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView_Input_KDA.ColumnHeadersVisible = false;
-            dataGridView_Input_KDA.Location = new Point(269, 52);
-            dataGridView_Input_KDA.Name = "dataGridView_Input_KDA";
-            dataGridView_Input_KDA.RowHeadersVisible = false;
-            dataGridView_Input_KDA.Size = new Size(213, 210);
-            dataGridView_Input_KDA.TabIndex = 2;
+            groupBoxResult_NVI.Controls.Add(dataGridMatrixResult_NVI);
+            groupBoxResult_NVI.Location = new Point(649, 12);
+            groupBoxResult_NVI.Name = "groupBoxResult_NVI";
+            groupBoxResult_NVI.Size = new Size(271, 426);
+            groupBoxResult_NVI.TabIndex = 2;
+            groupBoxResult_NVI.TabStop = false;
+            groupBoxResult_NVI.Text = "Результат";
             // 
-            // buttonHelp_KDA
+            // dataGridMatrixResult_NVI
             // 
-            buttonHelp_KDA.Location = new Point(586, 287);
-            buttonHelp_KDA.Name = "buttonHelp_KDA";
-            buttonHelp_KDA.Size = new Size(33, 23);
-            buttonHelp_KDA.TabIndex = 3;
-            buttonHelp_KDA.Text = "?";
-            buttonHelp_KDA.UseVisualStyleBackColor = true;
-            buttonHelp_KDA.Click += buttonHelp_KDA_Click;
+            dataGridMatrixResult_NVI.AllowUserToResizeColumns = false;
+            dataGridMatrixResult_NVI.AllowUserToResizeRows = false;
+            dataGridMatrixResult_NVI.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridMatrixResult_NVI.ColumnHeadersVisible = false;
+            dataGridMatrixResult_NVI.Location = new Point(6, 26);
+            dataGridMatrixResult_NVI.Name = "dataGridMatrixResult_NVI";
+            dataGridMatrixResult_NVI.ReadOnly = true;
+            dataGridMatrixResult_NVI.RowHeadersVisible = false;
+            dataGridMatrixResult_NVI.RowHeadersWidth = 51;
+            dataGridMatrixResult_NVI.Size = new Size(259, 380);
+            dataGridMatrixResult_NVI.TabIndex = 2;
             // 
-            // buttonDone_KDA
+            // buttonDone_NVI
             // 
-            buttonDone_KDA.Location = new Point(637, 287);
-            buttonDone_KDA.Name = "buttonDone_KDA";
-            buttonDone_KDA.Size = new Size(89, 23);
-            buttonDone_KDA.TabIndex = 4;
-            buttonDone_KDA.Text = "Выполнить";
-            buttonDone_KDA.UseVisualStyleBackColor = true;
-            buttonDone_KDA.Click += buttonDone_KDA_Click;
+            buttonDone_NVI.FlatStyle = FlatStyle.Flat;
+            buttonDone_NVI.Location = new Point(179, 372);
+            buttonDone_NVI.Name = "buttonDone_NVI";
+            buttonDone_NVI.Size = new Size(102, 34);
+            buttonDone_NVI.TabIndex = 2;
+            buttonDone_NVI.Text = "Выполнить";
+            buttonDone_NVI.UseVisualStyleBackColor = true;
+            buttonDone_NVI.Click += buttonDone_NVI_Click;
             // 
             // FormMain
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(752, 322);
-            Controls.Add(buttonDone_KDA);
-            Controls.Add(buttonHelp_KDA);
-            Controls.Add(dataGridView_Input_KDA);
-            Controls.Add(groupBoxOut_KDA);
-            Controls.Add(groupBoxYsl_KDA);
+            ClientSize = new Size(932, 450);
+            Controls.Add(groupBoxResult_NVI);
+            Controls.Add(groupBoxTask_NVI);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FormMain";
-            Text = "Спринт 6 | Таск 3 | Вариант 25| Тимонин.И.А";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Спринт 6 | Таск 3 | Вариант 25 | Носков В. И.";
             Load += FormMain_Load;
-            groupBoxYsl_KDA.ResumeLayout(false);
-            groupBoxYsl_KDA.PerformLayout();
-            groupBoxOut_KDA.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView_Output_KDA).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView_Input_KDA).EndInit();
+            groupBoxTask_NVI.ResumeLayout(false);
+            groupBoxTask_NVI.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridMatrix_NVI).EndInit();
+            groupBoxResult_NVI.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridMatrixResult_NVI).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private GroupBox groupBoxYsl_KDA;
-        private TextBox textBox1;
-        private GroupBox groupBoxOut_KDA;
-        private DataGridView dataGridView_Output_KDA;
-        private DataGridView dataGridView_Input_KDA;
-        private Button buttonHelp_KDA;
-        private Button buttonDone_KDA;
+        private GroupBox groupBoxTask_NVI;
+        private TextBox textBoxTask_NVI;
+        private DataGridView dataGridMatrix_NVI;
+        private Button buttonHelp_NVI;
+        private GroupBox groupBoxResult_NVI;
+        private DataGridView dataGridMatrixResult_NVI;
+        private Button buttonDone_NVI;
     }
 }

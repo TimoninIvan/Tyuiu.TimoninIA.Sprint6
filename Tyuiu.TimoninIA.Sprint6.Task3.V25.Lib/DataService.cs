@@ -5,22 +5,17 @@ namespace Tyuiu.TimoninIA.Sprint6.Task3.V25.Lib
     {
         public int[,] Calculate(int[,] matrix)
         {
-            int rows = matrix.GetUpperBound(0) + 1;
-            int cols = matrix.Length / rows;
-            int[,] res = new int[rows, cols];
-            for (int i = 0; i < rows; i++)
+            int[] thirdRow = new int[5];
+            for (int i = 0; i < thirdRow.Length; i++)
             {
-                for (int j = 0; j < cols; j++)
-                {
-                    if ((matrix[i, j] % 2 == 0) && (i == 2))
-                    {
-                        res[i, j] = 0;
-                    }
-                    else
-                        res[i, j] = matrix[i, j];
-                }
+                thirdRow[i] = matrix[i, 2];
             }
-            return res;
+            Array.Sort(thirdRow);
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                matrix[i, 2] = thirdRow[i];
+            }
+            return matrix;
         }
     }
 }
