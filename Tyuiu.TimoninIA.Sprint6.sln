@@ -33,7 +33,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tyuiu.TimoninIA.Sprint6.Tas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tyuiu.TimoninIA.Sprint6.Task3.V25.Test", "Tyuiu.TimoninIA.Sprint6.Task3.V25.Test\Tyuiu.TimoninIA.Sprint6.Task3.V25.Test.csproj", "{E51D4AAB-6D65-401D-BA11-B02CD852768F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tyuiu.TimoninIA.Sprin6.Task3.V25", "Tyuiu.TimoninIA.Sprin6.Task3.V25\Tyuiu.TimoninIA.Sprin6.Task3.V25.csproj", "{5C0B5BBC-B9BC-4B8D-9CEA-E9CEE57A7852}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tyuiu.TimoninIA.Sprint6.Task3.V25", "Tyuiu.TimoninIA.Sprin6.Task3.V25\Tyuiu.TimoninIA.Sprint6.Task3.V25.csproj", "{5C0B5BBC-B9BC-4B8D-9CEA-E9CEE57A7852}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
