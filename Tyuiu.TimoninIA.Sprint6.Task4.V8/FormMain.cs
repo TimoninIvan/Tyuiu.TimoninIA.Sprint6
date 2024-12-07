@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using Tyuiu.TimoninIA.Sprint6.Task4.V8.Lib;
 namespace Tyuiu.TimoninIA.Sprint6.Task4.V8
 {
@@ -34,12 +34,12 @@ namespace Tyuiu.TimoninIA.Sprint6.Task4.V8
             }
             catch
             {
-                MessageBox.Show("Введены неверные данные", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Р’РІРµРґРµРЅС‹ РЅРµРІРµСЂРЅС‹Рµ РґР°РЅРЅС‹Рµ", "РћС€РёР±РєР°", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void buttonHelp_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Таск 4 Выполнил студент группы ИИПБ 24-1, Тимонин Иван Александрович", "О программе");
+            MessageBox.Show("РўР°СЃРє 4 Р’С‹РїРѕР»РЅРёР» СЃС‚СѓРґРµРЅС‚ РіСЂСѓРїРїС‹ РРРџР‘ 24-1, РўРёРјРѕРЅРёРЅ РРІР°РЅ РђР»РµРєСЃР°РЅРґСЂРѕРІРёС‡", "Рћ РїСЂРѕРіСЂР°РјРјРµ");
         }
         private void buttonSave_Click(object sender, EventArgs e)
         {
@@ -48,7 +48,7 @@ namespace Tyuiu.TimoninIA.Sprint6.Task4.V8
                 string path = Path.Combine(Path.GetTempFileName(), "OutPutFileTaskV8.txt");
                 File.WriteAllText(path, textBoxResult.Text);
 
-                DialogResult dialogResult = MessageBox.Show("???? " + path + " ??????? ????????!\n ??????? ??? ? ?????????", "?????????", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                DialogResult dialogResult = MessageBox.Show("пїЅпїЅпїЅпїЅ " + path + " пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!\n пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ?", "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (dialogResult == DialogResult.Yes)
                 {
                     System.Diagnostics.Process txt = new System.Diagnostics.Process();
@@ -59,7 +59,7 @@ namespace Tyuiu.TimoninIA.Sprint6.Task4.V8
             }
             catch
             {
-                MessageBox.Show("???? ??? ?????????? ?????", "??????", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ", "пїЅпїЅпїЅпїЅпїЅпїЅ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void startValue_KeyPress(object sender, KeyPressEventArgs e)
