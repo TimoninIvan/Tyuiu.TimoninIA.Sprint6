@@ -18,7 +18,7 @@ namespace Tyuiu.TimoninIA.Sprint6.Task6.V13.Lib
                     {
                         if (i == mass.Length - 2)
                         {
-                            res = res + mass[i] + "";
+                            res = res + mass[i] + " ";
                         }
                     }
                 }
