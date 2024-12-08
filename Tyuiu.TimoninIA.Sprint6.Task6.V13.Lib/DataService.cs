@@ -22,6 +22,7 @@ namespace Tyuiu.TimoninIA.Sprint6.Task6.V13.Lib
                         }
                     }
                 }
+                res = res.Remove(res.Length - 1);
                 return res;
             }
         }
