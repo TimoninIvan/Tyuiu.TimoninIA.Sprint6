@@ -5,13 +5,12 @@ namespace Tyuiu.TimoninIA.Sprint6.Task6.V13.Test
     public class DataServiceTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void CheckMethodValid()
         {
-            DataService ds = new DataService();
-            string x = "EovFJ da WLCdQb mGVUEyeWqYrqAOaI\r\nVud ijiH W ehWGn qqAAJvRJjfODPAeE\r\nRgdW M QIK HDDYrXH McJC DBjgLMGsdo\r\nKwQBrOM upBSzre lhTKeblSG PbHxb\r\nEwyq YGVyY viZ FKxGs lLZdQ dXbj ERKy";
-            string y = "WLCdQb\r\nehWGn\r\nMcJC\r\nlhTKeblSG\r\ndXbj\r\n";
-            string z = ds.CollectTextFromFile(x, x);
-            Assert.AreEqual(y, z);
+            DataService dataService = new DataService();
+            string path = "C:\\DataSprint5\\Sprint6Task6\\InPutDataFileTask6V13.txt";
+            var res = dataService.CollectTextFromFile(path);
+            Assert.AreEqual("WLCdQb  ehWGn McJC lhTKeblSG dXbj", res);
         }
     }
 }

@@ -7,20 +7,25 @@ namespace Tyuiu.TimoninIA.Sprint6.Task6.V13
         {
             InitializeComponent();
         }
-
-        private void FormMain_Load(object sender, EventArgs e)
+        string openFilePath;
+        private void buttonHelp_Click(object sender, EventArgs e)
         {
-
+            FormAbout formAbout = new FormAbout();
+            formAbout.ShowDialog();
         }
 
-        private void ButtonOpenFile_Click(object sender, EventArgs e)
+        private void buttonLoad_Click(object sender, EventArgs e)
         {
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                string filecontent = File.ReadAllText(openFileDialog1.FileName);
-                DataService ds = new DataService();
-                TextBoxOut.Text = ds.CollectTextFromFile(filecontent, openFileDialog1.FileName);
-            }
+            openFileDialogTask.ShowDialog();
+            openFilePath = openFileDialogTask.FileName;
+            textBoxIn.Text = File.ReadAllText(openFilePath);
+            buttonDone.Enabled = true;
+        }
+        DataService ds = new DataService();
+        private void buttonDone_Click(object sender, EventArgs e)
+        {
+
+            textBoxOut.Text = ds.CollectTextFromFile(openFilePath);
         }
     }
 }

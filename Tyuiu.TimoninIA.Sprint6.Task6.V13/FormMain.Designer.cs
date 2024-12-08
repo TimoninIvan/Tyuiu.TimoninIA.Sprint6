@@ -32,72 +32,150 @@ namespace Tyuiu.TimoninIA.Sprint6.Task6.V13
         /// </summary>
         private void InitializeComponent()
         {
-            openFileDialog1 = new OpenFileDialog();
-            ButtonOpenFile = new Button();
-            TextBoxIn = new TextBox();
-            TextBoxOut = new TextBox();
-            ButtonProcessText = new Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
+            buttonHelp = new Button();
+            groupBox1 = new GroupBox();
+            textBox1 = new TextBox();
+            groupBox2 = new GroupBox();
+            textBoxIn = new TextBox();
+            groupBox3 = new GroupBox();
+            textBoxOut = new TextBox();
+            buttonLoad = new Button();
+            buttonDone = new Button();
+            openFileDialogTask = new OpenFileDialog();
+            groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
+            groupBox3.SuspendLayout();
             SuspendLayout();
             // 
-            // openFileDialog1
+            // buttonHelp
             // 
-            openFileDialog1.FileName = "openFileDialog1";
+            buttonHelp.FlatStyle = FlatStyle.Popup;
+            buttonHelp.Location = new Point(723, 12);
+            buttonHelp.Name = "buttonHelp";
+            buttonHelp.Size = new Size(65, 65);
+            buttonHelp.TabIndex = 0;
+            buttonHelp.UseVisualStyleBackColor = true;
+            buttonHelp.Click += buttonHelp_Click;
             // 
-            // ButtonOpenFile
+            // groupBox1
             // 
-            ButtonOpenFile.Location = new Point(267, 245);
-            ButtonOpenFile.Name = "ButtonOpenFile";
-            ButtonOpenFile.Size = new Size(197, 23);
-            ButtonOpenFile.TabIndex = 0;
-            ButtonOpenFile.Text = "Выбрать файл";
-            ButtonOpenFile.UseVisualStyleBackColor = true;
-            ButtonOpenFile.Click += ButtonOpenFile_Click;
+            groupBox1.Controls.Add(textBox1);
+            groupBox1.Location = new Point(5, 87);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(785, 103);
+            groupBox1.TabIndex = 1;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Условие:";
             // 
-            // TextBoxIn
+            // textBox1
             // 
-            TextBoxIn.Location = new Point(12, 133);
-            TextBoxIn.Name = "TextBoxIn";
-            TextBoxIn.Size = new Size(837, 23);
-            TextBoxIn.TabIndex = 1;
+            textBox1.Location = new Point(3, 23);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.ReadOnly = true;
+            textBox1.Size = new Size(776, 74);
+            textBox1.TabIndex = 0;
+            textBox1.Text = resources.GetString("textBox1.Text");
             // 
-            // TextBoxOut
+            // groupBox2
             // 
-            TextBoxOut.Location = new Point(12, 189);
-            TextBoxOut.Name = "TextBoxOut";
-            TextBoxOut.Size = new Size(837, 23);
-            TextBoxOut.TabIndex = 2;
+            groupBox2.Controls.Add(textBoxIn);
+            groupBox2.Location = new Point(12, 196);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(380, 242);
+            groupBox2.TabIndex = 2;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Ввод:";
             // 
-            // ButtonProcessText
+            // textBoxIn
             // 
-            ButtonProcessText.Location = new Point(308, 295);
-            ButtonProcessText.Name = "ButtonProcessText";
-            ButtonProcessText.Size = new Size(121, 23);
-            ButtonProcessText.TabIndex = 3;
-            ButtonProcessText.Text = "Обработать";
-            ButtonProcessText.UseVisualStyleBackColor = true;
+            textBoxIn.Location = new Point(11, 27);
+            textBoxIn.Multiline = true;
+            textBoxIn.Name = "textBoxIn";
+            textBoxIn.ReadOnly = true;
+            textBoxIn.Size = new Size(364, 210);
+            textBoxIn.TabIndex = 0;
+            // 
+            // groupBox3
+            // 
+            groupBox3.Controls.Add(textBoxOut);
+            groupBox3.Location = new Point(404, 196);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(380, 242);
+            groupBox3.TabIndex = 2;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "Вывод:";
+            // 
+            // textBoxOut
+            // 
+            textBoxOut.Location = new Point(10, 23);
+            textBoxOut.Multiline = true;
+            textBoxOut.Name = "textBoxOut";
+            textBoxOut.ReadOnly = true;
+            textBoxOut.Size = new Size(364, 210);
+            textBoxOut.TabIndex = 0;
+            // 
+            // buttonLoad
+            // 
+            buttonLoad.BackColor = Color.DarkCyan;
+            buttonLoad.Location = new Point(12, 12);
+            buttonLoad.Name = "buttonLoad";
+            buttonLoad.Size = new Size(132, 64);
+            buttonLoad.TabIndex = 3;
+            buttonLoad.Text = "Загрузить \r\nфайл";
+            buttonLoad.UseVisualStyleBackColor = false;
+            buttonLoad.Click += buttonLoad_Click;
+            // 
+            // buttonDone
+            // 
+            buttonDone.BackColor = Color.MediumTurquoise;
+            buttonDone.Enabled = false;
+            buttonDone.Location = new Point(150, 12);
+            buttonDone.Name = "buttonDone";
+            buttonDone.Size = new Size(132, 64);
+            buttonDone.TabIndex = 3;
+            buttonDone.Text = "Вывести результат";
+            buttonDone.UseVisualStyleBackColor = false;
+            buttonDone.Click += buttonDone_Click;
+            // 
+            // openFileDialogTask
+            // 
+            openFileDialogTask.FileName = "InPutFileTask6V14.txt";
             // 
             // FormMain
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(861, 494);
-            Controls.Add(ButtonProcessText);
-            Controls.Add(TextBoxOut);
-            Controls.Add(TextBoxIn);
-            Controls.Add(ButtonOpenFile);
+            ClientSize = new Size(800, 450);
+            Controls.Add(buttonDone);
+            Controls.Add(buttonLoad);
+            Controls.Add(groupBox3);
+            Controls.Add(groupBox2);
+            Controls.Add(groupBox1);
+            Controls.Add(buttonHelp);
             Name = "FormMain";
-            Text = "Form1";
-            Load += FormMain_Load;
+            Text = "FormMain";
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private OpenFileDialog openFileDialog1;
-        private Button ButtonOpenFile;
-        private TextBox TextBoxIn;
-        private TextBox TextBoxOut;
-        private Button ButtonProcessText;
+        private Button buttonHelp;
+        private GroupBox groupBox1;
+        private TextBox textBox1;
+        private GroupBox groupBox2;
+        private TextBox textBoxIn;
+        private GroupBox groupBox3;
+        private TextBox textBoxOut;
+        private Button buttonLoad;
+        private Button buttonDone;
+        private OpenFileDialog openFileDialogTask;
     }
 }
