@@ -5,7 +5,7 @@ namespace Tyuiu.TimoninIA.Sprint6.Task6.V13.Lib
     {
         public string CollectTextFromFile(string path)
         {
-            string res = "";
+            string res = " ";
             string line;
             string paath = Path.Combine(Path.GetTempPath(), "InPutDataFileTask6V13.txt");
             using (StreamReader sr = new StreamReader(path))
